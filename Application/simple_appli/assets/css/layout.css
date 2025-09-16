@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color:white
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* Background image or color */
+    background: url('/images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Transparent overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.2); /* Black with 40% opacity */
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+.myheader{
+    /* border:2px solid black; */
+    width:100%;
+    height:auto;
+    display: inline-flex;
+    top:1.8rem
+}
+
+.myheader ul{
+    position:absolute;
+  left:45%;
+  display:inline;
+  padding:8px 10px;
+}
+
+.myheader ul li{
+    list-style:none;
+    display:inline;
+    padding:8px 10px;
+    font-size:1.5rem;
+}
+
+.myheader ul li:hover{
+    cursor:pointer;
+    background-color: rgba(60, 142, 197, 0.89);
+    color:brown;
+
+}
+
+#button{
+    position: relative;
+    /* right:-4rem; */
+    left: 62rem;
+    /* border: 2px solid red; */
+    width:12rem;
+    border-radius:10px;
+}
+
+#button button{
+    border: none;
+    background-color: transparent;
+    margin: 0 0.4rem;
+    padding: 0.8rem 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    
+}
+
+#button button:hover{
+    background-color: rgba(60, 142, 197, 0.89);
+    cursor: pointer;
+    color: brown
+}
+
