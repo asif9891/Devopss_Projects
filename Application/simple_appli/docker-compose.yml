@@ -1,0 +1,20 @@
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile   # Capital 'D' (conventionally)
+    image: code-frontend:0.0.0
+    container_name: code-frontend
+    environment:
+      DB_HOST: testdatabase1.cves0og8gtjq.ca-central-1.rds.amazonaws.com
+      DB_USER: admin
+      DB_PASS: root12345678
+      DB_NAME: testdatabase1
+    ports:
+      - "8181:3000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
