@@ -1,0 +1,9 @@
+.container{
+    width: 15rem;
+    height: 40vh;
+    top: 5rem;
+    left:25rem;
+    position:absolute;
+    /* border: 2px solid black; */
+    background-color: transparent;
+}
