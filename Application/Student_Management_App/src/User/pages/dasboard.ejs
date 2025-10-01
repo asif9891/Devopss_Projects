@@ -1,0 +1,11 @@
+<% if (cateogry === 'Student') { %>
+    <!-- Student navigation -->
+     <%- include('S_navigation') %>
+<% } else if (cateogry === 'Faculty') { %>
+    <!-- Faculty navigation -->
+    <nav>
+        <a href="/faculty/home">Faculty Home</a>
+        <a href="/faculty/profile">Profile</a>
+        <!-- Add more faculty links -->
+    </nav>
+<% } %>

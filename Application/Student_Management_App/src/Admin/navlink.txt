@@ -1,0 +1,4 @@
+Home,/home
+Dashboard,/dashboard
+Profile,/profile
+Logout,/logout

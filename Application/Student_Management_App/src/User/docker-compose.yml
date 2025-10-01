@@ -1,0 +1,40 @@
+# version: "3.9"
+
+services:
+  Database:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3306:3306"
+    networks:
+      - twotier
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 60s
+
+  nodeApp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nodeuser:0.0.1
+    container_name: node-app
+    environment:
+      - DB_HOST=Database
+      - DB_USER=root
+      - DB_PASS=root
+      - DB_PORT=3306
+    ports:
+      - "3000:3000"
+    networks:
+      - twotier
+    depends_on:
+      - Database
+    
+networks:
+  twotier:
+    driver: bridge

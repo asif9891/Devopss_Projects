@@ -1,0 +1,62 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env/
+
+# Flask config
+instance/
+*.cfg
+*.env
+.env.*
+
+# Pytest / coverage
+.cache/
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+
+# MyPy / Pylint / VSCode
+.mypy_cache/
+.pylint.d/
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Database (if SQLite)
+*.sqlite3
+*.db
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Secrets
+secret.key
+config.yaml
+credentials.json
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node (if using Node in project)
+node_modules/
+
+# Docker (optional)
+*.pid

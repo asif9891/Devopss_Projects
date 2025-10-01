@@ -1,0 +1,14 @@
+services:
+  Admin:
+    build: 
+     context: .
+     dockerfile: Dockerfile
+    image: python-admin:0.0.1
+    container_name: admin
+    ports:
+      - "5000:5000"
+    networks:
+      - twotier
+networks:
+  twotier:
+    driver: bridge

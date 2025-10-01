@@ -1,0 +1,20 @@
+<!-- sidebar.html -->
+<aside class="sidebar">
+    <div class="profile-pic">
+        <label class="-label" for="file">
+            <span class="glyphicon glyphicon-camera"></span>
+            <span></span>
+        </label>
+        <input id="file" type="file" onchange="loadFile(event)" />
+        <img src="../static/asset/images/user.png" id="output" />
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#" data-target="home">Dashboard</a></li>
+            <li><a href="#" data-target="about">Teacher</a></li>
+            <li><a href="#" data-target="services">Student</a></li>
+            <li><a href="#" data-target="contact">Contact</a></li>
+            <li><a href="/logout" data-target="logout">Logout</a></li>
+        </ul>
+    </nav>
+</aside>

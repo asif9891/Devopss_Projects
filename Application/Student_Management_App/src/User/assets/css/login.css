@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: url('/images/bg.jpg'); /* Your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.logincontainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    min-width: 300px;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Headings */
+.logincontainer h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Inputs */
+.logincontainer input,
+.logincontainer select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #aaa;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+/* Labels */
+.logincontainer label {
+    align-self: flex-start;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Buttons */
+.logincontainer button {
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #4071f4;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.logincontainer button:hover {
+    background-color: #2f5ce3;
+}
+
+/* Signup link section */
+.dont {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.dont span {
+    margin-right: 0.5rem;
+}
+
+.dont button {
+    width: auto;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    background-color: #f4a641;
+    color: white;
+    margin-left: 0.5rem;
+}
+
+.dont button:hover {
+    background-color: #da8b2e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logincontainer {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}
