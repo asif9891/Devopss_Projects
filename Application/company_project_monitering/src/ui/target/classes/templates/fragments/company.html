@@ -1,0 +1,25 @@
+<div th:fragment="createcompany" class="bg-light d-flex justify-content-center ">
+  <div class="card shadow-lg p-4 w-100">
+    <form th:action="@{/admin/add-company}" method="post" class="row g-3 align-items-center">
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="compay_id" name="company_id" placeholder="company_id" required>
+      </div>
+
+      <div class="col-md-3">
+        <input type="text" class="form-control" id="companyName" name="company_name" placeholder="Company Name" required>
+      </div>
+
+      <div class="col-md-3">
+        <input type="text" class="form-control" id="location" name="location" placeholder="Location" required>
+      </div>
+
+      <div class="col-md-2">
+        <input type="date" class="form-control" id="endDate" name="project_date" required>
+      </div>
+
+      <div class="col-md-2 d-grid">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

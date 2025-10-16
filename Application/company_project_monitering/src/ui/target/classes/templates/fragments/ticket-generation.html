@@ -1,0 +1,34 @@
+<div th:fragment="ticket_generation" class="bg-light d-flex justify-content-center .w-100vw ">
+  <div class="card shadow-lg p-4 w-100">
+
+    <form th:action="@{/admin/assign/ticket}" method="post" class="row g-2 align-items-center">
+      <div class="col-md-3">
+        <select id="companyId" class="form-select" required>
+            <option value="">Ticket id</option>
+            <option th:each="company : ${companies}"
+                    th:value="${company['company_id']}"
+                    th:data-name="${company['company_name']}"
+                    th:text="${company['company_id']}"></option>
+          </select>
+      </div>
+
+      <div class="col-md-3">
+        <!-- <input type="text" class="form-control" id="companyName" placeholder="Company name" readonly> -->
+         <input type="text" id="companyName" class="form-control" readonly>
+      </div>
+
+      <div class="col-md-3">
+        <select id="employee_list" class="form-select" required>
+            <option value="">Select Employee</option>
+            <option th:each="Employee : ${employeeList}"
+                    th:value="${Employee['name']}"
+                    th:text="${Employee['name']}"></option>
+          </select>
+      </div>
+
+      <div class="col-md-3 d-grid">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

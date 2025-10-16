@@ -1,0 +1,32 @@
+
+<div th:fragment="list_employee" class="bg-dark-subtle mt-1">
+    <section class="card" style="width: 100%; height:80vh; overflow:auto;">
+        <table class="table table-bordered table-striped" th:if="${employeeList}">
+            <thead class="table-dark">
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Designation</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="emp : ${employeeList}">
+                    <td th:text="${emp['company_id']}"></td>
+                    <td th:text="${emp['name']}"></td>
+                    <td th:text="${emp['email']}"></td>
+                    <td th:text="${emp['Designation']}"></td>
+                    <td>
+                        <!-- Delete Button -->
+                        <a th:href="@{/admin/employee/delete/{id}(id=${emp['company_id']})}" 
+                           class="btn btn-sm btn-danger" 
+                           onclick="return confirm('Are you sure you want to delete this employee?');">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
+    </section>
+</div>

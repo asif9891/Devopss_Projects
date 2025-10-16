@@ -1,0 +1,21 @@
+        body {
+            background-color: #f8f9fa;
+        }
+        .error-container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .error-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .error-code {
+            font-size: 100px;
+            font-weight: bold;
+            color: #dc3545;
+        }

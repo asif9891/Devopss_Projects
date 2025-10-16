@@ -1,0 +1,26 @@
+<div th:fragment="Addemployee" class="bg-light d-flex justify-content-center .w-100vw ">
+  <div class="card shadow-lg p-4 w-100">
+
+    <form th:action="@{/admin/add_employee}" method="post" class="row g-1 align-items-center">
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="compay_id" name="company_id" placeholder="company_id" required>
+      </div>
+
+      <div class="col-md-3">
+        <input type="text" class="form-control" id="companyName" name="name" placeholder="Employee name" required>
+      </div>
+
+      <div class="col-md-3">
+        <input type="email" class="form-control" id="location" name="email" placeholder="Email" required>
+      </div>
+
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="location" name="Designation" placeholder="Designation" required>
+      </div>
+
+      <div class="col-md-2 d-grid">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

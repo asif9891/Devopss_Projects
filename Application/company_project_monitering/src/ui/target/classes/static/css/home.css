@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: #1565c0; */
+}
+h2 {
+    color: #1565c0;
+}
+
+form {
+    margin-top: 20px;
+}

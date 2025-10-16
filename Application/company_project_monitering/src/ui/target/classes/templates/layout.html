@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">App</title>
+    <!-- ✅ Global CSS -->
+   <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <!-- ✅ Optional page-specific CSS -->
+    <link rel="stylesheet" th:if="${pageCss != null}" th:href="@{/css/{file}(file=${pageCss})}">
+    <th:block layout:fragment="head"></th:block>
+</head>
+<body>
+
+    <!-- Page-specific content -->
+    <main layout:fragment="content">
+       
+    </main>
+
+    <script th:src="@{/javascript/bootstrap.bundle.min.js}"></script>
+
+<!-- Optional page-specific JS -->
+    <script th:if="${pageJs != null}" th:src="@{/javascript/{file}(file=${pageJs})}"></script>
+
+</body>
+</html>
